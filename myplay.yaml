@@ -1,0 +1,8 @@
+---
+- name: working with mysql installation
+  hosts:
+  tasks:
+    - name: installing mysql
+      yum:
+        name: mysql
+        state: latest
