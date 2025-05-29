@@ -5,7 +5,8 @@ pipeline {
     stage('git checkout') {
       steps {
         script {
-          println "Hi Team welcome to jenkins pipline as code"
+          var1=20
+          println "my var1 value is ${var1}"
         }
       }
     }
