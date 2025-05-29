@@ -5,13 +5,19 @@ pipeline {
     stage('git checkout') {
       steps {
         script {
-          a=10
-          b=20
-          if (a>b) {
-            println "a:${a} is big"
+          /*type1*/
+          lis1=["devops","aws","azure"]
+          for (ele  in lis1) {
+            println "my element is ${ele}"
           }
-          else {
-            println "b:${b} is big"
+          for(i=1;i<=5;i++) {
+            println "my i value is ${i}"
+          }
+          /*# while loop */
+          j=6
+          while (j<=10) {
+            println "j value is ${j}"
+            j=j+1
           }
         }
       }
