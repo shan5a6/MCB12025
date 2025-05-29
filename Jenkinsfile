@@ -1,3 +1,7 @@
+def myadd(a,b) {
+  sum = a+b
+  println "sum of ${a} & ${b} is ${sum}"
+}
 pipeline {
   /*agent server1/docker/kubernetes/any*/
   agent any 
@@ -5,20 +9,9 @@ pipeline {
     stage('git checkout') {
       steps {
         script {
-          /*type1*/
-          lis1=["devops","aws","azure"]
-          for (ele  in lis1) {
-            println "my element is ${ele}"
-          }
-          for(i=1;i<=5;i++) {
-            println "my i value is ${i}"
-          }
-          /*# while loop */
-          j=6
-          while (j<=10) {
-            println "j value is ${j}"
-            j=j+1
-          }
+            myadd(10,20)
+            myadd(100,200)
+            myadd(300,400)
         }
       }
     }
